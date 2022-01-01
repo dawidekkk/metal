@@ -1,0 +1,527 @@
+$lowMargin: 4px;
+$midMargin: 8px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #b9b9bb;
+  background-color: #a0a0a1;
+  position: relative;
+}
+
+.container {
+  margin-bottom: 8px;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 10vw;
+  display: none;
+  z-index: 5;
+  color: #000;
+}
+
+.logo {
+  text-align: center;
+  font-size: 4*$midMargin;
+  margin: 24px 0 36px 0;
+  font-family: 'Hammersmith One', sans-serif;
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem auto 0rem auto;
+  user-select: none;
+  margin-top: 2*$midMargin;
+}
+
+nav {
+  width: auto;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-size: contain;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  }
+
+  li {
+    list-style: none;
+    user-select: none;
+    text-align: center;
+  }
+
+    a {
+      color: rgb(10, 10, 10);
+      display: inline-block;
+      padding: 2*$lowMargin $lowMargin;
+      text-decoration: none;
+      font-size: 2.5*$midMargin;
+      font-family: 'Quantico', sans-serif;
+    }
+}
+
+.carouselButton {
+  padding: $lowMargin;
+  background: none;
+  background-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-radius: $midMargin;
+  padding: 4px;
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+button.carouselButton > a {
+  text-decoration: none;
+  color: rgb(50, 50, 50);
+  font-size: 12px;
+  font-family: 'Rubik', sans-serif;
+  padding: 4px;
+}
+
+.introText {
+  text-align: left;
+  font-size: 2.5*$midMargin;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(10, 10, 10);
+  font-weight: 500;
+  user-select: none;
+}
+
+.ourServices {
+  font-size: 2.5*$midMargin;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  color: rgb(10, 10, 10);
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+.aboutCompanyH {
+  color: rgb(10, 10, 10);
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+.aboutContact {
+  text-align: left;
+  font-size: 2.5*$midMargin;
+  font-family: 'Poppins', sans-serif;
+  color: rgb(10, 10, 10);
+  font-weight: 500;
+  user-select: none;
+}
+
+.sliderInfo {
+  
+  h5 {
+    font-size: 2.5*$midMargin;
+    font-family: 'Hammersmith One', sans-serif;
+    color: rgb(50, 50, 50);
+  }
+}
+
+.form-label {
+  color:rgb(10, 10, 10);
+}
+
+.figureIcons {
+  width: 64px; height: 64px;
+  filter: drop-shadow(0 0 0.75rem white);  
+  user-select: none;
+}
+
+.figureIcons2 {
+  animation-name: dropShadow;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes dropShadow {
+  0%{filter: drop-shadow(0 0 0.75rem black);}
+  10%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.9));}
+  20%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.8));}
+  30%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.7));}
+  40%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.6));}
+  50%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.5));}
+  60%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.4));}
+  70%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.3));}
+  80%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.2));}
+  90%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.1));}
+  100%{filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0,0.01));}
+}
+
+figure {
+  display: block;
+  text-align: center;
+
+  figcaption {
+    font-size: 1.8*$midMargin;
+  }
+}
+
+main {
+  margin-top: 3.5*$midMargin;
+}
+
+article > h1 {
+  text-align: center;
+  font-size: 2.5*$midMargin;
+  margin-bottom: 2*$midMargin;
+}
+
+.info {
+  text-align: left;
+  font-size: 1.7*$midMargin;
+  margin-bottom: 16px;
+}
+
+.labelEmailAdress {
+  width: 10px;
+}
+
+.emailFormButton {
+  padding: 8px;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 2*$midMargin;
+}
+
+.card {
+  margin: 1.5*$midMargin auto;
+  width: 15rem;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.card-img-top {
+  height: auto;
+}
+
+.tlocznik {
+  height: 195px;
+}
+
+.wykrojnik,
+.wtryskowy {
+  height: 399px;
+}
+
+iframe {
+  margin-bottom: 16px;
+}
+
+footer {
+  margin-top: 3.5*$midMargin;
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 4px;
+  background-color: rgba(236, 236, 237, 0.85);
+  padding: 3*$midMargin;
+  font-family: 'Barlow', sans-serif;
+}
+
+#services {
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 4px;
+  background-color: rgba(236, 236, 237, 0.85);
+  padding: 3*$midMargin;
+  font-family: 'Barlow', sans-serif;
+  margin-top: 1.5*$midMargin;
+}
+
+#aboutCompany {
+  background-color: rgba(236, 236, 237, 0.85);
+  border-radius: 4px;
+  padding: 3*$midMargin;
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  color: black;
+  margin-bottom: 1.5*$midMargin;
+}
+
+.brandInfo {
+  background-color: rgba(236, 236, 237, 0.85);
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 4px;
+  margin: 0;
+  padding: 3*$midMargin;
+  font-family: 'Barlow', sans-serif;
+  width: 85%;
+}
+
+.aboutCompanyText {
+  width: 90%;
+  margin: 0 auto;
+  color: rgb(25, 25, 25);
+  font-size: 14px;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+
+  strong {
+    color: black;
+  }
+}
+
+.carousel-caption {
+  font-family: 'Barlow', sans-serif;
+  color:rgb(25, 25, 25);
+}
+
+.figcaptionText {
+  font-size: 2*$midMargin;
+  font-family: 'Quantico', sans-serif;
+  font-weight: 500;
+  color: rgb(15, 15, 15);
+  width: 70%;
+
+  a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+  }
+}
+
+.brandInfo2 {
+  margin: 0;
+}
+
+.card-title {
+  font-size: 2.5*$midMargin;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color:rgb(25, 25, 25);
+}
+
+.card-text {
+  font-size: 1.7*$midMargin;
+}
+
+.carousel {
+  margin: 3.5*$midMargin 0;
+  box-shadow: rgba(6, 24, 44, 0.7) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 4px;
+}
+
+address {
+  text-align: center;
+  margin: 0;
+  font-size: 2*$midMargin;
+  color: rgb(25, 25, 25);
+
+  strong {
+    color: black;
+  }
+}
+
+.footerCopyright {
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
+  color: rgb(20, 20, 20);
+
+  a {
+    text-decoration: none;
+    color: rgb(20, 20, 20); 
+  }
+}
+
+.adressForm {
+  margin-top: 3*$midMargin;
+}
+
+.footerList {
+  display: flex;
+  flex-direction: row;
+  background-size: contain;
+  padding: 0;
+  align-items: center;
+  
+  li {
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    font-size: 2.2*$midMargin;
+  }
+}
+
+.footerList a:hover {
+  border-bottom: 2px solid rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
+}
+
+.test3,
+.test2,
+.test1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#particles-js canvas {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  display: inline;
+}
+
+@media screen and (max-width: 720px) {
+  
+  #particles-js canvas{
+    visibility: hidden;
+  }
+
+  .mmm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+
+  .carouselButton {
+    padding: 8px;
+  }
+  
+  button.carouselButton > a {
+    font-size: 16px;
+    padding: 8px;
+  }
+  
+  .card {
+    width: 18rem;
+  }
+
+  .mmm {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .test {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+  "test1 test2 test3"; 
+  width: 100%; height: auto; 
+
+  }
+
+  #brandInfo2 {
+    height: auto;
+  }
+
+  .test1 { 
+    grid-area: test1;
+  }
+  .test2 { 
+    grid-area: test2; 
+  }
+  .test3 { 
+    grid-area: test3; 
+    
+  }
+
+  .figureIcons {
+    width: 102px; height: 102px;
+  }
+
+  .figcaptionText {
+    margin-top: 12px;
+    font-size: 22px;
+    color: rgb(15, 15, 15);
+  }
+
+  .introText {
+    font-size: 26px;
+  }
+
+  .aboutCompanyH {
+    font-size: 26px;
+  }
+
+  .aboutContact {
+    font-size: 26px;
+  }
+
+  .ourServices {
+    font-size: 26px;
+  }
+
+  .carousel-caption > h5 {
+    font-size: 48px;
+  }
+
+  .logo {
+    font-size: 6*$midMargin;
+  }
+
+  .aboutCompanyText {
+    font-size: 20px;
+    width: 70%;
+  }
+
+  .mediaList {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+      a {
+        padding: 0 26px;
+        font-size: 22px;
+      }
+    }
+
+  .footerLinks a {
+    font-size: 20px;
+    font-family: 'Quantico', sans-serif;
+    color: rgb(10, 10, 10);
+  }
+
+  .footerCopyright {
+    font-size: 16px;
+  }
+}
+
+address {
+  font-size: 18px;
+
+  strong {
+    font-size: 22px;
+  }
+  
+}
