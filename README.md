@@ -1,2 +1,2 @@
 # metal
-testmetal.pl
+Ready for deployment project about metal industry. 
